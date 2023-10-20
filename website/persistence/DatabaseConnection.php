@@ -5,10 +5,8 @@ class DatabaseConnection{
     private $userName="user";
     private $password="password";
     
-   function getConnection(){
-        $dsn = 'mysql:host='. $this->host . ';dbname=' . $this->db;
-        $pdo = new PDO($dsn,$this->userName,$this->password);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        return $pdo;
+    function getConnection(){
+        $conn = new MySQLi($this->host,$this->userName,$this->password,$this->db);
+        return $conn;
     }
 }
