@@ -34,6 +34,7 @@ a {
 
 .header {
   padding: 40px 0 45px;
+  border-bottom: 1px solid var(--grey);
 }
 .brand {
   display: flex;
@@ -65,13 +66,11 @@ a {
   max-width: 1265px;
   color: white;
 }
-.article-title {
-  margin-bottom: 30px;
-
+.banner-title {
   font-size: 64px;
   font-weight: var(--fw-600);
 }
-.article-description {
+.banner-announce {
   font-size: 32px;
   font-weight: var(--fw-400);
   line-height: 160%; /* 51.2px */
@@ -102,7 +101,8 @@ a {
   width: calc((100% - 40px) / 2);
   min-height: 333px;
 }
-.card-date {
+.card-date,
+.article-date {
   display: inline-block;
   padding: 6px 18px;
 
@@ -116,7 +116,7 @@ a {
   font-size: 32px;
   font-weight: var(--fw-600);
 }
-.card-description {
+.card-announce {
   flex-grow: 1;
   font-size: 20px;
   line-height: 160%;
@@ -155,6 +155,8 @@ a {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+
+  user-select: none;
 }
 .pagination li:hover {
   cursor: pointer;
@@ -189,6 +191,95 @@ a {
 .pagination-next:hover path {
   background-color: var(--purple);
   fill: white;
+}
+
+/* article */
+.path-string {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+
+  margin-top: 72px;
+  margin-botton: 22px;
+}
+.path-divider,
+.path-title{
+    color: var(--grey);
+}
+.article-container {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 137px;
+}
+.article-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.article-title {
+  margin-bottom: 63px;
+
+  font-size: 64px;
+  font-weight: var(--fw-600);
+  line-height: normal;
+}
+.article-date {
+  max-width: 118px;
+}
+.article-announce p {
+  color: var(--purple);
+  font-size: 32px;
+  font-weight: var(--fw-600);
+  line-height: normal;
+}
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.article-content p {
+  font-size: 20px;
+  font-weight: var(--fw-400);
+  line-height: 160%;
+}
+.article-back--button span {
+  margin-left: 7px;
+
+  color: var(--purple);
+  font-size: 16px;
+  font-weight: var(--fw-600);
+}
+.article-back--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: var(--fw-600);
+
+  max-width: 286px;
+  border-radius: 50px;
+  padding: 16px 41px;
+
+  border: 2px solid var(--light-purple);
+}
+.article-back--button:hover span {
+  color: white;
+}
+.article-back--button:hover,
+.article-back--button:hover path {
+  background-color: var(--purple);
+  fill: white;
+}
+.article-image {
+  display: flex;
+  justify-content: center;
+}
+.article-image img {
+    object-fit: contain;
+
 }
 /* footer */
 
